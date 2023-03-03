@@ -12,6 +12,34 @@ export default function Quiz() {
                     <button type="button" className="answer-btn">Salir</button>
                 </div>
             </div>
+            <div className="question-wrapper">
+                <h2 className="question">How would one say goodbye in Spanish?</h2>
+                <div className="answers-wrapper">
+                    <button type="button" className="answer-btn">Adiós</button>
+                    <button type="button" className="answer-btn">Hola</button>
+                    <button type="button" className="answer-btn">Au Revoir</button>
+                    <button type="button" className="answer-btn">Salir</button>
+                </div>
+            </div>
+            <div className="question-wrapper">
+                <h2 className="question">How would one say goodbye in Spanish?</h2>
+                <div className="answers-wrapper">
+                    <button type="button" className="answer-btn">Adiós</button>
+                    <button type="button" className="answer-btn">Hola</button>
+                    <button type="button" className="answer-btn">Au Revoir</button>
+                    <button type="button" className="answer-btn">Salir</button>
+                </div>
+            </div>
+            <div className="question-wrapper">
+                <h2 className="question">How would one say goodbye in Spanish?</h2>
+                <div className="answers-wrapper">
+                    <button type="button" className="answer-btn">Adiós</button>
+                    <button type="button" className="answer-btn">Hola</button>
+                    <button type="button" className="answer-btn">Au Revoir</button>
+                    <button type="button" className="answer-btn">Salir</button>
+                </div>
+            </div>
+            <button className="main-btn" id="check-answers-btn">Check answers</button>
         </div>
     )
 }
