@@ -149,4 +149,7 @@ button {
   main {
     max-width: 700px;
   }
+  #start-btn {
+    width: 30%;
+  }
 }
