@@ -63,8 +63,12 @@ export default function App() {
       )
     })
 
+  const styles = {
+    height: !isQuiz && '100vh'
+  }
+
   return (
-    <main>
+    <main style={styles}>
       {!isQuiz ? <Start startQuiz={startQuiz} /> : <Quiz quizElements={quizElements} />}
     </main>
   )

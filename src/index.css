@@ -61,8 +61,8 @@ button {
   line-height: 1.2;
 }
 
-#start-btn {
-  width: 30%;
+#start-btn{
+  padding: 1.2em 1.75em;
 }
 
 .main-btn {
@@ -132,8 +132,11 @@ button {
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 413px) {
   main {
     padding: 2.5em 4.4em;
+  }
+  #start-btn {
+    width: 40%;
   }
 }
