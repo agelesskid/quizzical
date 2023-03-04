@@ -67,9 +67,11 @@ export default function App() {
     height: !isQuiz && '100vh'
   }
 
+  console.log(quizData.length)
+
   return (
     <main style={styles}>
-      {!isQuiz ? <Start startQuiz={startQuiz} /> : <Quiz quizElements={quizElements} />}
+      {!isQuiz ? <Start startQuiz={startQuiz} isData={quizData.length > 0 ? true : false} /> : <Quiz quizElements={quizElements} />}
     </main>
   )
 }

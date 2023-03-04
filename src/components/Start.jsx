@@ -8,9 +8,10 @@ export default function Start(props) {
                 className="main-btn"
                 type='button'
                 id="start-btn"
+                disabled={!props.isData}
                 onClick={props.startQuiz}
             >
-                Start quiz
+                {props.isData ? "Start quiz" : "Loading..."}
             </button>
         </>
     )
