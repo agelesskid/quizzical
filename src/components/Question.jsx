@@ -3,7 +3,11 @@ import Answer from './Answer'
 
 export default function Question(props) {
 
-    const answerElements = props.options.map(el=>{
+    const optionsArr = props.options
+    
+    optionsArr.splice(props.randomIndex, 0, props.answer)
+
+    const answerElements = optionsArr.map(el=>{
         const answerId = nanoid()
 
         return <Answer key={answerId} body={el}/>
