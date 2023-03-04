@@ -106,12 +106,12 @@ button {
   color: var(--main-dark-color);
 }
 
-.answers-wrapper {
+.options-wrapper {
   display: flex;
   align-items: center;
 }
 
-.answer-btn {
+.option-btn {
   background-color: transparent;
   margin-right: 1.2em;
   border: 1px solid var(--secondary-dark-color);

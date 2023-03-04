@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid'
-import Answer from './Answer'
+import Option from './Option'
 
 export default function Question(props) {
 
@@ -7,17 +7,17 @@ export default function Question(props) {
     
     optionsArr.splice(props.randomIndex, 0, props.answer)
 
-    const answerElements = optionsArr.map(el=>{
-        const answerId = nanoid()
+    const optionsElements = optionsArr.map(el=>{
+        const optionsId = nanoid()
 
-        return <Answer key={answerId} body={el}/>
+        return <Option key={optionsId} answer={props.answer} body={el}/>
     })
 
     return (
         <div className="question-wrapper">
             <h2 className="question" dangerouslySetInnerHTML={{__html: props.body}}></h2>
-            <div className="answers-wrapper">
-                {answerElements}
+            <div className="options-wrapper">
+                {optionsElements}
             </div>
         </div>
     )
