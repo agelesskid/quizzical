@@ -20,21 +20,20 @@
 }
 
 #big-yellow-blob, #small-yellow-blob {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: -1;
 }
 
 #big-blue-blob, #small-blue-blob {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   z-index: -1;
 }
 
 main {
-  height: 100vh;
   max-width: 550px;
   margin: 0 auto;
   padding: .5em;
@@ -108,12 +107,14 @@ button {
 
 .options-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .option-btn {
   background-color: transparent;
   margin-right: 1.2em;
+  margin-bottom: 1em;
   border: 1px solid var(--secondary-dark-color);
   border-radius: 8px;
   padding: .5em 1.75em;
@@ -126,6 +127,7 @@ button {
 
 @media (min-width: 350px) {
   main {
+    height: 100vh;
     padding: 1em 2em;
   }
 }
