@@ -127,6 +127,18 @@ button {
   color: var(--main-dark-color);
 }
 
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25em;
+  flex-wrap: wrap;
+}
+
+.btn-wrapper p {
+  margin: 0;
+}
+
 /* Media */
 
 @media (min-width: 350px) {

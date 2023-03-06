@@ -6,25 +6,32 @@ export default function Question(props) {
 
     const [options, setOptions] = useState(generateOptionsTemplate())
 
-    useEffect(generateOptions, [])
+    useEffect(()=>{
+        if(!props.check){
+            generateOptions()
+        }
+    }, [props.check])
 
     function generateOption() {
         return {
             id: nanoid(),
             body: '',
-            isActive: false
+            isActive: false,
+            isAnswer: false
         }
     }
 
     function generateOptionsTemplate() {
-        const optionsArr = new Array(4).fill(0).map(()=>generateOption())
+        const optionsArr = new Array(props.optionsArr.length).fill(0).map(()=>generateOption())
         return optionsArr
     }
 
     function generateOptions() {
         setOptions(prevOptions=>prevOptions.map((option, index)=>({
             ...option,
-            body: props.optionsArr[index]
+            body: props.optionsArr[index],
+            isActive: false,
+            isAnswer: props.optionsArr[index] === props.answer ? true : false
         })))
     }
 
@@ -42,6 +49,9 @@ export default function Question(props) {
             id={el.id}
             body={el.body}
             isActive={el.isActive}
+            isAnswer={el.isAnswer}
+            check={props.check}
+            increaseScore={props.increaseScore}
             activateOption={()=>{activateOption(props.id, el.id)}}
         />
     })
