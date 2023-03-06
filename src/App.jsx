@@ -52,6 +52,7 @@ export default function App() {
     generateQuiz()
     setIsQuiz(true)
     setCheck(false)
+    setScore(0)
   }
 
   function checkAnswers() {
